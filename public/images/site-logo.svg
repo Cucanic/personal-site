@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Oliver Cucanic logo">
+  <g fill="none" stroke="white" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 8c14 0 24 10 24 24S34 56 20 56" />
+    <path d="M44 8C30 8 20 18 20 32s10 24 24 24" />
+    <path d="M23 18h18" />
+    <path d="M18 32h28" />
+    <path d="M23 46h18" />
+  </g>
+</svg>

@@ -1,0 +1,352 @@
+---
+import "../styles/global.css";
+
+const navItems = ["Home", "About", "Projects", "Experiences", "Podcasts", "Contact"];
+const contactUrl = "https://www.linkedin.com/in/olivercucanic";
+const siteTitle = "Oliver Cucanic: Home";
+const siteDescription =
+  "Oliver Cucanic is a scientist and startup founder who enjoys building things from scratch. This site showcases his research, projects, and early-stage work.";
+
+const logoItems = [
+  {
+    label: "Australian Catholic University",
+    detail: "Lectured Biomedical Science students on biotechnology and immunology.",
+    src: "/images/logo-mark.png",
+    href: "https://www.acu.edu.au/",
+    scale: 1.06,
+  },
+  {
+    label: "Peter MacCallum Cancer Centre",
+    detail: "Studied how breast cancer spreads to the lung and brain.",
+    src: "/images/acu-logo.webp",
+    href: "https://www.petermac.org/research/research-programs-and-labs/cancer-evolution-and-metastasis-program-lab/steven-stacker-lab",
+    scale: 1.04,
+  },
+  {
+    label: "Sindy Labs",
+    detail: "Created an AI-powered digital teacher's assistant.",
+    src: "/images/petermac-logo.png",
+    href: "https://www.businessnewsaustralia.com/articles/melbourne-founded-digital-teaching-assistant-sindy-ai-accepted-into-berkeley-skydeck-accelerator.html",
+    scale: 1.12,
+  },
+  {
+    label: "The University of Melbourne",
+    detail: "Completed my PhD in cancer biology.",
+    src: "/images/sindy-logo.png",
+    href: "https://about.unimelb.edu.au/facts-and-figures",
+    scale: 1.28,
+  },
+  {
+    label: "Podcasting",
+    detail: "Interviewed top Australian founders, investors, and researchers.",
+    src: "/images/unimelb-logo.png",
+    href: "https://insaneambition.beehiiv.com/",
+    scale: 1.42,
+  },
+  {
+    label: "University of California, Berkeley",
+    detail: "Completed a 6-month accelerator led by top Silicon Valley VCs and operators.",
+    src: "/images/extra-logo.png",
+    href: "https://skydeck.berkeley.edu/",
+    scale: 1.14,
+  },
+  {
+    label: "St Vincent's Institute",
+    detail: "Prepared insulin-producing cells for Type 1 Diabetes therapy.",
+    src: "/images/berkeley-logo.png",
+    href: "https://www.svi.edu.au/research/collaborative-programs/the-tom-mandel-islet-transplant-program/",
+    scale: 1.08,
+  },
+];
+const carouselItems = [...logoItems, ...logoItems, ...logoItems];
+
+const projects = [
+  {
+    title: "Understanding Cancer Metastasis",
+    org: "The Peter MacCallum Cancer Centre",
+    copy:
+      "Spent the last 5 years studying how breast cancer spreads to the lungs and brain. Used single-cell and spatial transcriptomics to map how cells changed during this process, and developed new protein-based drugs aimed at stopping it.",
+    stats: [
+      ["Coffee drank", "Alot"],
+      ["Year", "2025"],
+    ],
+    image: "/images/svi-logo.jpg",
+    accent: "95, 130, 83",
+  },
+  {
+    title: "Building an AI Teaching Assistant",
+    org: "Sindy Labs",
+    copy:
+      "Founded, built, recruited and raised while completing my PhD in cancer research. Backed by Berkeley SkyDeck.",
+    stats: [
+      ["Raised", "$500k"],
+      ["Year", "2025"],
+    ],
+    image: "/images/sindy-team-updated.png",
+    accent: "123, 77, 38",
+  },
+  {
+    title: "Lecturing & Mentoring",
+    org: "ACU & Unimelb",
+    copy:
+      "Taught subjects in biotech and immunology to undergraduate and post-graduate students across the Melbourne Biomedical Precinct.",
+    stats: [
+      ["Lessons Taught", "50+"],
+      ["Years", "5"],
+    ],
+    image: "/images/lecture.jpg",
+    accent: "95, 72, 120",
+  },
+  {
+    title: "Hackathons & Competitions",
+    org: "Local & International",
+    copy:
+      "Awarded over $200K in competitive grants and prizes through hackathons and pitch competitions. Recognised by organisations like Heidi Health, Google Cloud, MedTech Actuator, and UC Berkeley. Finalist in 3MT, multiple-time university pitch winner, and recipient of scholarships with <1 to 10% acceptance rates.",
+    stats: [
+      ["No. Awards/ Prizes", "24+"],
+      ["Cumulative Prize Pool", "$200k+"],
+    ],
+    image: "/images/hackathon.jpg",
+    accent: "35, 93, 120",
+  },
+];
+
+const ventures = [
+  ["Founder & Scientist", "Puulp™", "2026 – Present"],
+  ["Senior Product Strategist", "Appetiser Apps", "2025 – 2026"],
+  ["Doctoral Candidate", "The Peter MacCallum Cancer Centre", "2021 - 2025"],
+  ["Medical Research Scientist", "St. Vincent's Institute", "2020 - Present"],
+  ["Lecturer / Demonstrator", "Australian Catholic University", "2019 - Present"],
+  ["Co-Founder", "Sindy Labs (prev. Sincidium)", "2023 - 2024"],
+];
+
+const skillGroups = [
+  {
+    title: "Technical",
+    items: [
+      "Molecular Biology",
+      "Immunology",
+      "Microbiology",
+      "Target Discovery",
+      "Transcriptomics",
+      "Protein Design & Development",
+      "In Vivo Disease Models",
+      "Oncology",
+      "In Vitro Models",
+      "Microsurgery",
+      "Data Analysis",
+      "C",
+      "Basic Python",
+      "+ More",
+    ],
+  },
+  {
+    title: "Operator",
+    items: [
+      "Fundraising",
+      "Storytelling",
+      "Go-to-Market Planning",
+      "Talent Acquisition",
+      "Product Strategy/ UX",
+      "Product Management",
+      "Experimental Design",
+      "Scientific Writing",
+      "Grant Applications",
+      "Ethics Applications",
+      "Interviewing",
+      "+ More",
+    ],
+  },
+];
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={siteDescription} />
+    <link rel="canonical" href="https://www.cucanic.com/" />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:url" content="https://www.cucanic.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.cucanic.com/images/oliver-headshot-highres.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={siteDescription} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{siteTitle}</title>
+  </head>
+  <body>
+    <div class="site-bg" aria-hidden="true">
+      <span class="fluid-blob fluid-blob-one"></span>
+      <span class="fluid-blob fluid-blob-two"></span>
+      <span class="fluid-blob fluid-blob-three"></span>
+      <span class="fluid-blob fluid-blob-four"></span>
+      <span class="fluid-blob fluid-blob-five"></span>
+      <span class="fluid-blob fluid-blob-six"></span>
+    </div>
+
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#home" aria-label="Oliver Cucanic home" class="brand-link">
+          <img src="/images/dna-logo.png" alt="" width="512" height="512" />
+        </a>
+        <div class="nav-center">
+          {navItems.slice(0, -1).map((item) => <a href={`#${item.toLowerCase()}`}>{item}</a>)}
+        </div>
+        <a class="contact-pill" href={contactUrl} target="_blank" rel="noreferrer">Contact</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero-section">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <img class="portrait" src="/images/oliver-headshot-highres.png" alt="Oliver Cucanic" />
+          <div class="role-badge">
+            <img class="role-badge-mark" src="/images/pill-icon.png" alt="" width="512" height="512" />
+            Cellular & Molecular Biologist
+          </div>
+          <h1 class="hero-title">
+            Hi I'm Oliver. Trained in science, now building things.
+          </h1>
+          <p class="hero-copy">
+            I spent a decade studying disease to understand how health fails. Then I moved into building products to learn how real-world impact actually happens. Today, I focus on creating things that improve people's lives at scale.
+          </p>
+          <a href={contactUrl} class="hero-cta" target="_blank" rel="noreferrer">Let's Connect</a>
+        </div>
+      </section>
+
+      <section id="about" class="logo-section">
+        <div class="logo-carousel" aria-label="Experience logos">
+          <div class="logo-track">
+          {carouselItems.map((item) => (
+            <a class="logo-tile" href={item.href} target="_blank" rel="noreferrer" aria-label={`${item.label}: ${item.detail}`} style={`--logo-scale: ${item.scale};`}>
+              <img src={item.src} alt="" loading="lazy" />
+              <span class="logo-caption">
+                <strong>{item.label}</strong>
+                <em>{item.detail}</em>
+              </span>
+            </a>
+          ))}
+          </div>
+        </div>
+        <h2 id="projects">Things That Kept Me Up at Night</h2>
+      </section>
+
+      <section class="project-stack" aria-label="Selected projects">
+        {projects.map((project, index) => (
+          <article class="project-card" style={`--accent: ${project.accent}; --i: ${index};`}>
+            <div class="project-copy">
+              <h3>{project.title}</h3>
+              <p class="project-org">{project.org}</p>
+              <p>{project.copy}</p>
+            </div>
+            <div class="project-media">
+              <img src={project.image} alt="" loading="lazy" />
+              <div class="project-stats">
+                {project.stats.map(([label, value]) => (
+                  <div>
+                    <span>{label}</span>
+                    <strong>{value}</strong>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <section class="summary-line">
+        <p>
+          Researcher and operator in <span>Oncology & Genomics</span> with over <span>9 years</span> of applied scientific experience.
+        </p>
+      </section>
+
+      <section id="experiences" class="ventures-section">
+        <h2>Most Recent Ventures</h2>
+        <div class="venture-list">
+          {ventures.map(([role, company, years]) => (
+            <article class="venture-row">
+              <h3>{role}</h3>
+              <div>
+                <p>{company}</p>
+                <span>{years}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="skills-section">
+        <h2>Skills I Picked Up Along the Way</h2>
+        {skillGroups.map((group) => (
+          <div class="skill-group">
+            <h3>{group.title}</h3>
+            <div class="skill-list">
+              {group.items.map((skill) => <span>{skill}</span>)}
+            </div>
+          </div>
+        ))}
+      </section>
+
+      <section id="podcasts" class="podcast-section">
+        <div class="section-heading">
+          <h2>Conversations I Never Thought I'd Have</h2>
+          <a href="https://www.youtube.com/watch?v=pPM1_qnMQfE" target="_blank" rel="noreferrer">See More</a>
+        </div>
+        <article class="podcast-row">
+          <a class="podcast-thumb" href="https://www.youtube.com/watch?v=pPM1_qnMQfE" target="_blank" rel="noreferrer" aria-label="Watch podcast episode">
+            <img src="/images/podcast-thumb.webp" alt="Courage and tenacity: the story of Reebok with Joe Foster" loading="lazy" />
+            <span aria-hidden="true"></span>
+          </a>
+          <div>
+            <p>April, 2024</p>
+            <h3>
+              Spoke with Joe Foster (<strong>Founder of Reebok</strong>) about building a multi-billion dollar shoe empire, rivaling Nike, and selling the company to Adidas.
+            </h3>
+          </div>
+        </article>
+      </section>
+
+      <section class="quote-section" aria-label="Personal quote">
+        <p class="footer-quote">Be impatient with actions & patient with results. When you feel passionate, take action immediately.</p>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div>
+        <p>© Oliver Cucanic 2025.</p>
+        <a href={contactUrl} target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </footer>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <script>
+      const cursorGlow = document.querySelector(".cursor-glow");
+      if (cursorGlow && window.matchMedia("(pointer: fine)").matches) {
+        let x = window.innerWidth / 2;
+        let y = window.innerHeight / 2;
+        let targetX = x;
+        let targetY = y;
+
+        window.addEventListener("pointermove", (event) => {
+          targetX = event.clientX;
+          targetY = event.clientY;
+        });
+
+        const render = () => {
+          x += (targetX - x) * 0.42;
+          y += (targetY - y) * 0.42;
+          cursorGlow.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
+          requestAnimationFrame(render);
+        };
+
+        render();
+      }
+    </script>
+  </body>
+</html>
